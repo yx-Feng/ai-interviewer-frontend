@@ -1,0 +1,217 @@
+.page {
+	/* position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #FFFFFF; */
+	
+	/* display: flex;
+	flex-direction: column; */
+}
+
+.bg {
+	width: 100%;
+	height: 100vh;
+	background-color: aqua;
+}
+
+.ai-interviewer-video {
+	/* width: 100%; */
+	/* height: 100vh; */
+	width: 750rpx;
+	height: 100%;
+}
+
+/* 解决视频底部有白边问题 */
+video {
+  vertical-align: middle;
+}
+
+.operator-content {
+	position: fixed;
+	bottom: 320rpx;
+	
+	width: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	/* background-color: beige; */
+}
+
+.question-wrapper {
+	/* width: 96%; */
+	/* align-self: center; */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	
+	width: 100%;
+	height: auto;
+	/* cover-view 标签中，不能使用opacity进行透明，只能用下面的 */
+	background:rgba(0,0,0,0.5); 
+	
+	/* padding: 0 20rpx; */
+}
+
+.question-number {
+	/* background-color: #5a529c; */
+	/* width: inherit; */
+	/* height: auto; */
+	/* padding: 10rpx 20rpx; */
+	color: #FFFFFF;
+	font-size: 34rpx;
+	font-weight: bold;
+	
+	/* cover-view 标签中，不能使用opacity进行透明，只能用下面的 */
+	/* background:rgba(0,0,0,0.5); */
+}
+
+.question-content {
+	/* background:rgba(0,0,0,0.5); */
+	
+	color: #FFFFFF;
+	font-size: 34rpx;
+	font-weight: bold;
+	width: 100%;
+}
+
+/* .empty-block-top {
+	background:rgba(0,0,0,0.5); 
+	height: 20rpx;
+} */
+
+/* .empty-block-middle {
+	background:rgba(0,0,0,0.5); 
+	height: 2rpx;
+} */
+
+/* .empty-block-bottom {
+	background:rgba(0,0,0,0.5); 
+	height: 12rpx;
+} */
+
+/* .empty-block-right {
+	background:rgba(0,0,0,0.5);
+	width: 40rpx;
+} */
+
+/* .empty-block-left {
+	background:rgba(0,0,0,0.5);
+	width: 40rpx;
+} */
+
+/* .whole-question {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+} */
+
+
+
+
+.bottom-side-box {
+	
+	position: fixed;
+	bottom: 150rpx;
+	
+	/* margin-top: 100rpx; */
+	width: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.btn-go-login {
+	background-color: #6c53fc;
+	
+	/* margin-top: 50rpx; */
+	border-width: 1px;
+	border-color: #FFFFFF;
+	width: 600rpx;
+	height: 96rpx;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-self: center;
+}
+
+.btn-submit {
+	background-color: #1eb90f;
+	
+	/* margin-top: 50rpx; */
+	border-width: 1px;
+	border-color: #FFFFFF;
+	width: 600rpx;
+	height: 96rpx;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-self: center;
+}
+
+.login-btn-text {
+	font-size: 18px;
+	color: #FFFFFF;
+	font-weight: 400;
+	align-self: center;
+	
+	/* height: 100%; */
+	
+	/* padding-top: 17rpx; */
+}
+
+.record-box {
+	position: fixed;
+	bottom: 100rpx;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+	width: 100%;
+}
+
+.tips-text {
+	margin-top: 20rpx;
+	align-self: center;
+	white-space:pre-wrap;
+	
+	color: #9092ff;
+}
+
+.big-num-box {
+	position: fixed;
+	top: 500rpx;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+	width: 100%;
+}
+
+.big-num-text {
+	margin-top: 20rpx;
+	align-self: center;
+	white-space:pre-wrap;
+	
+	font-size: 380rpx;
+	
+	color: #ffffff;
+}
+
+/* 见 https://ask.dcloud.net.cn/article/38744 */
+cover-view {
+	display: inlin-block;
+	line-height: normal!important;
+	/* overflow: hidden; */
+	white-space: inherit;
+	/* pointer-events: auto; */
+}
+

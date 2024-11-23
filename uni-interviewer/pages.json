@@ -1,0 +1,46 @@
+{
+    "pages" : [
+        //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+		    "path" : "pages/welcome",
+		    "style" : {
+				"navigationBarTitleText" : "主页",
+		        "app-plus" : {
+		            "titleNView" : false, 	// 禁用原生导航栏
+					"bounce" : "none"  		// 将回弹属性关掉
+		        },
+		        "enablePullDownRefresh" : false // 开启单页面下拉刷新功能
+		    }
+		},
+		{
+			"path" : "pages/interviewer",
+			"style" : {
+				"navigationBarTitleText" : "AI面试官",
+			    "app-plus" : {
+			        "titleNView" : false, 	// 禁用原生导航栏
+					"bounce" : "none"  		// 将回弹属性关掉
+			    },
+			    "enablePullDownRefresh" : false // 开启单页面下拉刷新功能
+			}
+		},
+		{
+		    "path" : "pages/me",
+		    "style" : {
+				"navigationBarTitleText" : "提交结果页面",
+		        "app-plus" : {
+		            "titleNView" : false, 	// 禁用原生导航栏
+		        	"bounce" : "none"  		// 将回弹属性关掉
+		        },
+		        "enablePullDownRefresh" : false // 开启单页面下拉刷新功能
+		    }
+		}
+    ],
+    "globalStyle" : {
+        "navigationBarTextStyle" : "black",
+        "navigationBarBackgroundColor" : "#ecedec",
+        "backgroundColor" : "#ecedec",
+		"backgroundColorTop" : "#ecedec",
+		"backgroundColorBottom" : "#fefffe",
+		"fontSize": "16px"
+    }
+}

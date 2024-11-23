@@ -1,0 +1,101 @@
+page {
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+}
+
+.page-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.submit-box {
+	position: fixed;
+	top: 400rpx;
+	
+	align-self: center;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.icon-submit {
+	width: 360rpx;
+	height: 320rpx;
+	
+	align-self: center;
+}
+
+.done-text {
+	align-self: center;
+	color: #1cb90e;
+	font-weight: bold;
+}
+
+.say-something-block {
+	position: fixed;
+	bottom:20rpx;
+	
+	margin-top: 80upx;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-self: center;
+	
+	margin-bottom: 60upx;
+}
+
+.say-something-box {
+	align-self: center;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.more-text {
+	color: #c6c2c2;
+	font-size: 11px;
+	font-weight: 400;
+	
+	align-self: center;
+}
+
+.smill-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.smill {
+	width: 64px;
+	height: 64px;
+	margin-bottom: 60upx;
+}
+
+.header-left-part {
+	color: #1a1a1a;
+	align-self: center;
+}
+
+.header-right-part {
+	display: flex;
+	flex-direction: row;
+}
+
+.icon-qrcode {
+	width: 22px;
+	height: 22px;
+	align-self: center;
+	
+	margin-right: 20px;
+}
+
+.right-arrow {
+	width: 12px;
+	height: 12px;
+	align-self: center;
+}
