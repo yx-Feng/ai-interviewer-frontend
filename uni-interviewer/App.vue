@@ -23,29 +23,14 @@
 		},
 		onLaunch: function() {
 			console.log('App Launch')
-			
-			
-			// this.clearUserInfo();
-			
 				
 			// 仅竖屏
 			// #ifdef APP-PLUS
 			plus.screen.lockOrientation("portrait-primary")
 			// #endif
-						
-			// this.showTabBarRedDot(2);
-			// this.hideTabBarRedDot(2);
-			
-			// this.setTabBarRedNumber(0, 2);
-			// this.removeTabBarBadge(0);
 		},
 		onShow: function() {
 			console.log('App Show:' + this.getAppEnv());
-			
-			// ws重连
-			// if (!me.globalData.chatSocketOpen) {
-			// 	me.globalData.chatSocketOpen = true;
-			// }
 		},
 		onHide: function() {
 			console.log('App Hide')
@@ -157,8 +142,6 @@
 			// 判断用户是否登录
 			userIsLogin() {
 				var userToken = this.getUserSessionToken();
-				// var userInfo = this.getUserInfoSession();
-				// console.log("userInfo=" + userInfo);
 				console.log("userToken=" + userToken);
 				 // && !this.isStrEmpty(userInfo)
 				if (!this.isStrEmpty(userToken)) {

@@ -31,19 +31,13 @@ video {
 .operator-content {
 	position: fixed;
 	bottom: 320rpx;
-	
 	width: 100%;
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	
-	/* background-color: beige; */
 }
 
 .question-wrapper {
-	/* width: 96%; */
-	/* align-self: center; */
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -52,65 +46,20 @@ video {
 	height: auto;
 	/* cover-view 标签中，不能使用opacity进行透明，只能用下面的 */
 	background:rgba(0,0,0,0.5); 
-	
-	/* padding: 0 20rpx; */
 }
 
 .question-number {
-	/* background-color: #5a529c; */
-	/* width: inherit; */
-	/* height: auto; */
-	/* padding: 10rpx 20rpx; */
 	color: #FFFFFF;
 	font-size: 34rpx;
 	font-weight: bold;
-	
-	/* cover-view 标签中，不能使用opacity进行透明，只能用下面的 */
-	/* background:rgba(0,0,0,0.5); */
 }
 
 .question-content {
-	/* background:rgba(0,0,0,0.5); */
-	
 	color: #FFFFFF;
 	font-size: 34rpx;
 	font-weight: bold;
 	width: 100%;
 }
-
-/* .empty-block-top {
-	background:rgba(0,0,0,0.5); 
-	height: 20rpx;
-} */
-
-/* .empty-block-middle {
-	background:rgba(0,0,0,0.5); 
-	height: 2rpx;
-} */
-
-/* .empty-block-bottom {
-	background:rgba(0,0,0,0.5); 
-	height: 12rpx;
-} */
-
-/* .empty-block-right {
-	background:rgba(0,0,0,0.5);
-	width: 40rpx;
-} */
-
-/* .empty-block-left {
-	background:rgba(0,0,0,0.5);
-	width: 40rpx;
-} */
-
-/* .whole-question {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-} */
-
-
-
 
 .bottom-side-box {
 	
@@ -160,10 +109,6 @@ video {
 	color: #FFFFFF;
 	font-weight: 400;
 	align-self: center;
-	
-	/* height: 100%; */
-	
-	/* padding-top: 17rpx; */
 }
 
 .record-box {
