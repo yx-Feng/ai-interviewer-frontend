@@ -72,6 +72,14 @@
                     "xhdpi" : "/Users/lee/Desktop/starter_720x1242.png",
                     "xxhdpi" : "/Users/lee/Desktop/starter_1080x1882.png"
                 }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "C:/Users/19065/Pictures/robot72x72.png",
+                    "xhdpi" : "C:/Users/19065/Pictures/robot96x96.png",
+                    "xxhdpi" : "C:/Users/19065/Pictures/robot144x144.png",
+                    "xxxhdpi" : "C:/Users/19065/Pictures/robot192x192.png"
+                }
             }
         }
     },

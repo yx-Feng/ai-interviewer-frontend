@@ -1,8 +1,5 @@
 <template>
 	<view class="bg">
-	<!-- class="ai-interviewer-video" -->
-	<!-- src="../static/ai/ai-interviewer-002.mp4" -->
-	<!-- src="http://10.0.0.18:9000/test/1_Easy-Wav2Lip.mp4" -->
 		<video 
 			v-if="questionList.length > 0"
 			id="myVideo" 
@@ -19,17 +16,10 @@
 		>
 		
 			<cover-view class="operator-content">
-				<!-- <cover-view class="whole-question"> -->
-					<!-- <cover-view class="empty-block-right"></cover-view> -->
 					<cover-view class="question-wrapper">
-						<!-- <cover-view class="empty-block-top"></cover-view> -->
 						<cover-view class="question-number">第{{currentIndex+1}}题/共{{questionList.length}}题</cover-view>
-						<!-- <cover-view class="empty-block-middle"></cover-view> -->
 						<cover-view class="question-content">{{questionList[currentIndex].question}}</cover-view>
-						<!-- <cover-view class="empty-block-bottom"></cover-view> -->
 					</cover-view>
-					<!-- <cover-view class="empty-block-left"></cover-view> -->
-				<!-- </cover-view> -->
 			</cover-view>
 			
 			<cover-view class="bottom-side-box">
@@ -85,18 +75,10 @@
 						question: "MongoDB是什么？有没有事务类型呢类？",
 						aiSrc: "../static/ai/ai-interviewer-003.mp4",
 					}
-					// ,{
-					// 	question: "MySql是什么？有没有事务类型呢类型呢MySql是什么？有没有事务类型呢？",
-					// 	aiSrc: "http://10.0.0.18:9000/test/1_Easy-Wav2Lip.mp4",
-					// }
 					,{
 						question: "SpringCloud和SpringBoot的区别是什么？",
 						aiSrc: "../static/ai/ai-interviewer-003.mp4",
 					}
-					// ,{
-					// 	question: "MySql是什么？有没有事务类型呢类型呢MySql是什么？有没有事务类型呢？",
-					// 	aiSrc: "http://10.0.0.18:9000/test/1_Easy-Wav2Lip.mp4",
-					// }
 				],
 				totalTimer: 1,
 			}
@@ -155,18 +137,9 @@
 					// 停止获得终止时间，并且计算时间差
 					var recordEndTime = new Date();
 					var recordStartTime = self.recordStartTime;
-					// console.log("recordEndTime = " + recordEndTime.getTime());
-					// console.log("recordStartTime = " + recordStartTime.getTime());
 					var timeDiff = recordEndTime.getTime() - recordStartTime.getTime();
 					// console.log("timeDiff = " + timeDiff);
 					var timeDiffSeconds = Math.round(timeDiff / 1000);
-					// 时间差即为录制音频的市场
-					// self.recorderVoice.speakVoiceDuration = timeDiffSeconds;
-					// console.log("this.recorderVoice.speakVoiceDuration = " + self.recorderVoice.speakVoiceDuration);
-					// 超过60s自动关闭，所以需要设置isSpeaking为false
-					// self.isSpeaking = false;
-					
-					// self.recorderVoice.voicePath = res.tempFilePath;
 					
 					if (timeDiffSeconds < 1) {
 						uni.showToast({
@@ -180,11 +153,6 @@
 					var recorderVoice = new Object();
 					recorderVoice["speakVoiceDuration"] = timeDiffSeconds;
 					recorderVoice["voicePath"] = res.tempFilePath;
-					
-					// console.log(recorderVoice);
-					// self.voiceDisplay(res.tempFilePath);
-					// console.log("self.currentIndex = " + self.currentIndex);
-					// return;
 					
 					var currentIndex = self.currentIndex;
 					
@@ -227,17 +195,9 @@
 										self.questionList[currentIndex].answerContent = answerContent;
 										
 									} else {
-										// uni.showToast({
-										// 	title: res.msg,
-										// 	icon: 'none'
-										// })
 										self.questionList[currentIndex].answerContent = "";
 									}
 								} else {
-									// uni.showToast({
-									// 	title: "上传失败",
-									// 	icon: 'error'
-									// })
 									self.questionList[currentIndex].answerContent = "";
 								}
 							}
@@ -332,12 +292,6 @@
 							}
 						}
 					});
-				
-				
-				
-						
-
-				
 			},
 			
 			// 计时方法
@@ -372,19 +326,6 @@
 					console.log("~~~~~~~~~~~~~~~~进去if~~~~~~~~~~~~~~~"); 
 					this.videoContext.play();
 				}
-				
-				
-				// var questionList = this.questionList;
-				// var pendingIndex = index + 1;
-				// if (pendingIndex < questionList.length) {
-				// 	me.currentIndex = pendingIndex;
-				// 	me.isRecordAudio = 1;
-					
-				// 	var smsTimer = this.smsTimer;
-				// 	clearInterval(smsTimer);
-				// } else {
-				// 	me.isRecordAudio = 3;
-				// }
 			},
 			
 			next(index) {

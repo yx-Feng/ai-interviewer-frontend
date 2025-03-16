@@ -1,7 +1,4 @@
 <script>
-	import provinceList from './json/area_province.js';
-	import cityList from './json/area_city.js';
-	import districtList from './json/area_district.js';
 	export default {
 		globalData: {
 			// serverUrl: "http://10.100.93.244:8080",		// 开发环境，不能使用localhost
@@ -9,10 +6,6 @@
 			serverUrl: "http://43.163.114.227:8080",					// 生产环境
 			
 			minNode: {},  
-			 
-			provinceList: provinceList,
-			cityList: cityList,
-			districtList: districtList,
 			
 			env: "fengjianyingyue",
 			// env: "itzixi",

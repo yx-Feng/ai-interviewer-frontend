@@ -12,15 +12,15 @@
 			</view>
 			
 			<view class="say-something-box" style="margin-top: 4px;">
-				<text class="more-text">源码相关内容所有权归风间影月</text>
+				<text class="more-text">源码相关内容所有权归张三</text>
 			</view>
 			
 			<view class="say-something-box" style="margin-top: 3px;">
-				<text class="more-text">www.itzixi.com</text>
+				<text class="more-text">www.bing.com</text>
 			</view>
 			
 			<view class="say-something-box" style="margin-top: 3px;">
-				<text class="more-text">®️ 风间影月</text>
+				<text class="more-text">®️ 张三</text>
 			</view>
 			
 			<view class="smill-box">
