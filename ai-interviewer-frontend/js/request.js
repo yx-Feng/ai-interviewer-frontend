@@ -2,8 +2,8 @@
 // 创建axios实例
 const instance = axios.create({
     // baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
-    baseURL: "http://127.0.0.1:8080", // url = base url + request url
-    // baseURL: "http://43.154.8.189:9090", // url = base url + request url
+    // baseURL: "http://127.0.0.1:8080", // url = base url + request url
+    baseURL: "http://43.163.114.227:8080", // url = base url + request url
     withCredentials: true, // send cookies when cross-domain requests
     timeout: 5000 // request timeout
 });

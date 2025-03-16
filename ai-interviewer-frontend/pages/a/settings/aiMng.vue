@@ -9,12 +9,7 @@
                     <el-form ref="interviewerForm" :model="interviewerForm" :rules="rules" label-width="140px">
                         <el-form-item label="数字人形象图" prop="link">
                             <div style="display: flex; flex-direction: row; justify-content: flex-start;">
-                                <el-upload
-                                    drag
-                                    class="course-cover-uploader"
-                                    action=""
-                                    :http-request="p => uploadAI(p)"
-                                    :show-file-list="false">
+                                <el-upload drag class="course-cover-uploader" action="" :http-request="p => uploadAI(p)" :show-file-list="false">
                                     <i class="el-icon-upload" style="margin: 70px 0 16px;"></i>
                                     <div class="el-upload__text">将形象图拖拽此处<br/><em>点击上传</em></div>
                                     <div class="el-upload__tip" slot="tip" style="margin-top: -16px;">只能上传PNG或JPG文件, 且不超过2MB。建议上传 540*960、720*1280或1080*1920px 的图片</div>
@@ -100,27 +95,11 @@ module.exports = {
                 ],
             },
 
-            interviewerList: [],
-            interviewerList2: [{
-                id: "1001", 
-                link: "",
-                image: "https://www.itzixi.com/files/course/cover/38b3c8e5-4ae5-4fb3-a413-68fe9f35e812.png",
-                aiName: "风间影月",
-                createTime: "2023-12-12 12:15:15",
-                updatedTime: "2023-12-12 12:15:15",
-            },{
-                id: "1002", 
-                link: "",
-                image: "https://www.itzixi.com/files/course/cover/38b3c8e5-4ae5-4fb3-a413-68fe9f35e812.png",
-                aiName: "郑耀先",
-                createTime: "2023-12-12 12:15:15",
-                updatedTime: "2023-12-12 12:15:15",
-            }]
+            interviewerList: []
         }
     },
     mounted() {
         var me = this;
-
         this.initInterviewerList();
     },
     methods: {
@@ -275,21 +254,15 @@ module.exports = {
                 aiName: "",
             }
         }
-
     },
 }
 </script>
 
 <style>
 .carouselContentCreate-box {
-    /* padding: 10px; */
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    /* border: solid 10px #e3e9ef; */
-
     font-size: 16px;
 }
 
@@ -306,21 +279,12 @@ module.exports = {
     margin-bottom: 20px;
 }
 
-/* .carouselContentCreate-box .course-cover-uploader {
-    width: 260px;  360  400
-    height: 160px;      245
-} */
-
 .carouselContentCreate-box .el-upload-dragger {
     width: 180px;
     height: 320px;
 }
 
 .carouselContentCreate-box .course-cover {
-    /* width: 260px;
-    height: 160px; */
-    /* width: 360px;
-    height: 220px; */
     width: 180px;
     height: 320px;
     margin-left: 10px;

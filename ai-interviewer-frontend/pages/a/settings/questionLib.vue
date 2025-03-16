@@ -45,10 +45,7 @@
                                 </el-switch>
                             </template>
                         </el-table-column>
-                        
-                        <!-- <el-table-column prop="dateTime" label="创建时间" width="190" header-align="center" align="center"></el-table-column> -->
-                        <!-- <el-table-column prop="dateTime" label="更新时间" width="190" header-align="center" align="center"></el-table-column> -->
-
+                    
                         <el-table-column label="操作" width="200" header-align="center" align="center">
                             <template slot-scope="scope">
                                 <el-button type="info" size="mini" plain @click="modifyQuestion(scope.row.questionLibId)">修改</el-button>
@@ -59,13 +56,8 @@
 
                 </div>
 
-                <el-pagination
-                    background
-                    @current-change="doPageList"
-                    layout="total, prev, pager, next"
-                    :page-size="questionLibListPageInfo.pageSize"
-                    :total="questionLibListPageInfo.records">
-                    </el-pagination>
+                <el-pagination background @current-change="doPageList" layout="total, prev, pager, next" :page-size="questionLibListPageInfo.pageSize" :total="questionLibListPageInfo.records">
+                </el-pagination>
 
             </el-tab-pane>
         </el-tabs>
@@ -274,12 +266,6 @@ module.exports = {
                     duration: 2000
                 });
 
-                // this.questionLibListPageInfo = {
-                //     page: 1,
-                //     pageSize: 10,
-                //     records: 0,     // 总记录数
-                //     total: 0,       // 总页数
-                // };
                 this.initQuestionLibList(this.questionLibListPageInfo.page, this.questionLibListPageInfo.pageSize);
             });
 
@@ -458,14 +444,9 @@ module.exports = {
 
 <style>
 .allTechTagsList-box {
-    /* padding: 10px; */
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    /* border: solid 10px #e3e9ef; */
-
     font-size: 16px;
 }
 

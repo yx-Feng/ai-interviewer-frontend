@@ -1,24 +1,16 @@
 <template>
     <div class="orderCreate-box">
-
         <el-tabs v-model="activeTab" type="border-card">
             <el-tab-pane :label="activeTitle" name="createJob">
-
                 <div class="table-wrapper">
-
                     <el-form ref="jobForm" :rules="rules" :model="jobForm" label-width="140px">
                         <el-form-item label="职位名" prop="jobName">
                             <el-input v-model="jobForm.jobName" style="width: 360px;"></el-input>
                         </el-form-item>
 
                         <el-form-item label="职位描述" prop="jobDesc">
-                            <el-input
-                                type="textarea"
-                                :rows="3"
-                                placeholder="请输入内容"
-                                style="width: 360px;"
-                                v-model="jobForm.jobDesc">
-                                </el-input>
+                            <el-input type="textarea" :rows="3" placeholder="请输入内容" style="width: 360px;" v-model="jobForm.jobDesc">
+                            </el-input>
                         </el-form-item>
 
                         <el-form-item label="状态" prop="status">
@@ -28,14 +20,7 @@
 
                         <el-form-item label="面试官" prop="interviewerId">
                             <el-select v-model="jobForm.interviewerId" placeholder="请选择面试官" style="width: 360px;">
-                                <!-- <el-option label="风间影月" value="1"></el-option>
-                                <el-option label="郑耀先" value="2"></el-option>
-                                <el-option label="周志乾" value="3 "></el-option> -->
-                                <el-option
-                                    v-for="item in interviewerList"
-                                    :key="item.id"
-                                    :label="item.aiName"
-                                    :value="item.id">
+                                <el-option v-for="item in interviewerList" :key="item.id" :label="item.aiName" :value="item.id">
                                 </el-option>
                             </el-select>
                         </el-form-item>
@@ -50,15 +35,12 @@
                                 </el-input>
                         </el-form-item>
                         
-
                         <el-form-item>
                             <el-button type="primary" @click="confirmSubmit">立即提交</el-button>
                             <el-button @click="cleanForm">取消</el-button>
                         </el-form-item>
                     </el-form>
-
                 </div>
-
             </el-tab-pane>
         </el-tabs>
 
@@ -128,20 +110,10 @@ module.exports = {
         getJobDetail(id) {
 
             jobApi.detail(id).then(response => {
-                // console.log(response);
                 var job = response.data;
                 job.status = job.status.toString();
                 this.jobForm = job;
                 console.log(job);
-
-                // this.jobForm = {
-                //     id: job.id,
-                //     jobName: job.jobName,
-                //     jobDesc: job.jobDesc,
-                //     status: job.status,
-                //     interviewerId: job.interviewerId,
-                //     prompt: job.prompt,
-                // }
             });
 
         },
@@ -210,14 +182,9 @@ module.exports = {
 
 <style>
 .orderCreate-box {
-    /* padding: 10px; */
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    /* border: solid 10px #e3e9ef; */
-
     font-size: 16px;
 }
 

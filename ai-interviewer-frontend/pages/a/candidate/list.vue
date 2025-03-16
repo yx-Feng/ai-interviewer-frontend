@@ -15,14 +15,10 @@
                     <el-table :data="candidateList" border stripe class="table-list">
                         <el-table-column type="index" header-align="center" align="center" width="50"></el-table-column>
                         <el-table-column label="应聘者姓名" header-align="center" align="center" width="180">
-                            <template slot-scope="scope">
-                                {{scope.row.realName}}
-                            </template>
+                            <template slot-scope="scope">{{scope.row.realName}}</template>
                         </el-table-column>
                         <el-table-column label="身份证号码" header-align="center" align="center" width="220">
-                            <template slot-scope="scope">
-                                {{scope.row.identityNum}}
-                            </template>
+                            <template slot-scope="scope">{{scope.row.identityNum}}</template>
                         </el-table-column>
                         <el-table-column label="性别" header-align="center" align="center" width="80">
                             <template slot-scope="scope">
@@ -34,19 +30,13 @@
                             </template>
                         </el-table-column>
                         <el-table-column label="手机号" header-align="center" align="center" width="180">
-                            <template slot-scope="scope">
-                                {{scope.row.mobile}}
-                            </template>
+                            <template slot-scope="scope">{{scope.row.mobile}}</template>
                         </el-table-column>
                         <el-table-column label="邮箱" header-align="center" align="center" width="220">
-                            <template slot-scope="scope">
-                                {{scope.row.email}}
-                            </template>
+                            <template slot-scope="scope">{{scope.row.email}}</template>
                         </el-table-column>
                         <el-table-column label="出生日期" header-align="center" align="center" width="120">
-                            <template slot-scope="scope">
-                                {{ scope.row.birthday }}
-                            </template>
+                            <template slot-scope="scope">{{ scope.row.birthday }}</template>
                         </el-table-column>
                         <el-table-column prop="jobName" label="面试岗位" width="180" header-align="center" align="center"></el-table-column>
                         <el-table-column prop="createdTime" label="创建时间" min-width="180" header-align="center" align="center"></el-table-column>
@@ -57,20 +47,11 @@
                             </template>
                         </el-table-column>
                     </el-table>
-
                 </div>
-
-                <el-pagination
-                    background
-                    @current-change="doPageList"
-                    layout="total, prev, pager, next"
-                    :page-size="candidateListPageInfo.pageSize"
-                    :total="candidateListPageInfo.records">
-                    </el-pagination>
-
+                <el-pagination background @current-change="doPageList" layout="total, prev, pager, next" :page-size="candidateListPageInfo.pageSize" :total="candidateListPageInfo.records">
+                </el-pagination>
             </el-tab-pane>
         </el-tabs>
-
     </div>
 </template>
 
@@ -79,16 +60,13 @@ module.exports = {
     data() {
         return {
             activeTab: "allOrderList",
-
             dialogUserInfoVisible: false,
-
             searchBO: {
                 page: 0,
                 pageSize: 0,
                 realName: "",
                 mobile: "",
             },
-
             candidateList: [],
             candidateListPageInfo: {
                 page: 1,
@@ -102,20 +80,15 @@ module.exports = {
         this.initCandidateList(1, this.candidateListPageInfo.pageSize);
     },
     methods: {
-
         initCandidateList(page, pageSize) {
-
             var searchBO = this.searchBO;
             searchBO.page = page;
             searchBO.pageSize = pageSize;
-
-            console.log(searchBO);
-
+            // console.log(searchBO);
             candidateApi.list(searchBO).then(response => {
                 console.log(response);
                 var candidateList = response.data.rows;
                 this.candidateList = candidateList;
-
                 this.candidateListPageInfo.records = response.data.records;
                 this.candidateListPageInfo.total = response.data.total;
                 this.candidateListPageInfo.page = page;
@@ -142,7 +115,6 @@ module.exports = {
         },
 
         deleteCandidate(candidateId) {
-
             this.$confirm('确认删除该候选人吗？', '提示', {
                 confirmButtonText: '确认删除',
                 cancelButtonText: '容我三思',
@@ -173,14 +145,9 @@ module.exports = {
 
 <style>
 .orderlist-box {
-    /* padding: 10px; */
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    /* border: solid 10px #e3e9ef; */
-
     font-size: 16px;
 }
 

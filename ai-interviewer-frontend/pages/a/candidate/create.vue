@@ -1,17 +1,11 @@
 <template>
     <div class="orderCreate-box">
-
         <el-tabs v-model="activeTab" type="border-card">
             <el-tab-pane :label="activeTitle" name="createCandidate">
-
                 <div class="table-wrapper">
-
                     <el-form ref="candidateForm" :model="candidateForm" :rules="rules" label-width="140px">
                         <el-form-item label="面试岗位" prop="jobId">
                             <el-select v-model="candidateForm.jobId" placeholder="请选择面试岗位" style="width: 360px;">
-                                <!-- <el-option label="Java高级工程师" value="1"></el-option>
-                                <el-option label="Java架构师" value="2"></el-option>
-                                <el-option label="技术总监" value="3 "></el-option> -->
                                 <el-option
                                     v-for="item in jobNameList"
                                     :key="item.jobId"
@@ -40,20 +34,15 @@
                         <el-form-item label="邮箱" prop="email">
                             <el-input v-model="candidateForm.email" style="width: 360px;"></el-input>
                         </el-form-item>
-
                         <el-form-item label="出生日期">
                             <el-date-picker value-format="yyyy-MM-dd" type="datetime" placeholder="请选择出生日期" v-model="candidateForm.birthday" style="width: 360px;"></el-date-picker>
                         </el-form-item>
-                        
-
                         <el-form-item>
                             <el-button type="primary" @click="createCandidate">立即提交</el-button>
                             <el-button>取消</el-button>
                         </el-form-item>
                     </el-form>
-
                 </div>
-
             </el-tab-pane>
         </el-tabs>
 
@@ -67,7 +56,6 @@ module.exports = {
         return {
             activeTab: "createCandidate",
             activeTitle: "",
-
             candidateForm: {
                 jobId: "",
                 realName: "",
@@ -78,7 +66,6 @@ module.exports = {
                 birthday: "",
             },
             jobNameList: [],
-
             rules: {
                 jobId: [
                     { required: true, message: '请选择面试岗位', trigger: 'blur' },
@@ -103,44 +90,33 @@ module.exports = {
     },
     mounted() {
         var me = this;
-
         var candidateId = this.$route.query.candidateId;
         console.log("candidateId = " + candidateId);
-
         if (app.isNotEmpty(candidateId)) {
             var params = {
                 candidateId: candidateId
             }
-
             me.activeTitle = "编辑候选人"
-
             this.getCandidate(candidateId);
         } else {
             me.activeTitle = "创建候选人"
         }
-
         this.initJobNameList();
 
     },
     methods: {
         getCandidate(candidateId) {
-            candidateApi.detail(candidateId).then(response => {
-                // console.log(response);
-                
+            candidateApi.detail(candidateId).then(response => { 
                 var candidate = response.data;
                 candidate.sex = String(candidate.sex);
-
                 console.log(candidate);
-
                 this.candidateForm = candidate;
             });
         },
 
         createCandidate() {
             console.log(this.candidateForm);
-
             var candidateForm = this.candidateForm;
-
             var formName = "candidateForm";
             this.$refs[formName].validate((valid) => {
                 if (valid) {
@@ -163,17 +139,14 @@ module.exports = {
         submitContent() {
             var bo = this.candidateForm;
             console.log(bo);
-
             candidateApi.createOrUpdate(bo).then(response => {
                 console.log(response);
-
                 this.$message({
                     showClose: true,
                     message: '候选人信息保存成功!',
                     type: 'success',
                     duration: 2000
                 });
-
                 this.clearForm();
             });
 
@@ -205,14 +178,9 @@ module.exports = {
 
 <style>
 .orderCreate-box {
-    /* padding: 10px; */
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    /* border: solid 10px #e3e9ef; */
-
     font-size: 16px;
 }
 

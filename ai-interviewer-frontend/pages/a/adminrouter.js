@@ -3,7 +3,6 @@ window.myrouter = {
     routes: [
 
         { path: '/', component: httpVueLoader('candidate/list.vue') },
-		{ path: '/dashboard', component: httpVueLoader('dashboard.vue') },
 
         { path: '/candidateMng/candidateList', component: httpVueLoader('candidate/list.vue') },
         { path: '/candidateMng/candidateCreate', component: httpVueLoader('candidate/create.vue') },
